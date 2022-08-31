@@ -5,3 +5,10 @@ body, html {
     background-color: grey;
     font-size: 14px;
 }
+
+.padding-0 > *{
+    padding-right:0;
+    padding-left:0;
+}
+
+// @import '../../../node_modules/bootstrap/scss/bootstrap';

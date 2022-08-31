@@ -4,4 +4,9 @@ body, html {
   width: 100%;
   background-color: grey;
   font-size: 14px;
+}
+
+.padding-0 > * {
+  padding-right: 0;
+  padding-left: 0;
 }/*# sourceMappingURL=App.css.map */

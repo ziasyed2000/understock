@@ -1,18 +1,23 @@
-.row {
-    background-color: white;
-    // height: 100px;
+$header-bg: black;
+$searchBtn-color: rgb(253, 0, 0);
+
+.navBar {
+    background-color: $header-bg;
 }
 
-.col {
-    padding: 0;
+.searchBtn {
+    background-color: $searchBtn-color;
+}
+
+.row {
+    background-color: white;
 }
 
 .container {
     margin: 0;
+    padding: 0;
 }
 
-#i-user {
-    
-}
+@import '../../../node_modules/bootstrap/scss/bootstrap';
 
 

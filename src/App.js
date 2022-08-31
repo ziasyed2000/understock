@@ -9,18 +9,18 @@ function App() {
   return (
     <div className="layout">
       <Container fluid>
-        <Row>
-          <Col>
+        <Row className="padding-0">
+          <Col className="padding-0">
             <Header />
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="padding-0">
             content
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="padding-0">
             Footer
           </Col>
         </Row>

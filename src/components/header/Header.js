@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "./header.css";
 
 // Requirements:
@@ -17,7 +17,7 @@ import "./header.css";
 export default function Header(props) {
   return (
     <>
-      <Navbar bg="dark" variant="dark" className="justify-content-center">
+      <Navbar bg="dark" variant="dark" className="navBar">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -37,13 +37,14 @@ export default function Header(props) {
                 className="justify-content-center"
                 aria-label="Search"
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="primary" className="searchBtn">Search</Button>
             </Form>
           </Container>
           <Nav className="ms-auto">
             <Container className="d-flex align-items-center">
               <svg
                 id="i-user"
+                className="user"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
                 width="22"
@@ -60,15 +61,16 @@ export default function Header(props) {
             <Nav.Link href="">My Account</Nav.Link>
             <Container className="d-flex align-items-center">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                fill="white"
                 className="bi bi-cart"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="white"
                 viewBox="0 0 16 16"
               >
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
               </svg>
+              <Nav.Link>Your Cart</Nav.Link>
             </Container>
           </Nav>
         </Container>
