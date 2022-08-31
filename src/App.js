@@ -1,10 +1,30 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './App-Styles/App.css'
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <div className="layout">
+      <Container fluid>
+        <Row sm={8}>
+          <Col>
+            Header
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            content
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            Footer
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
