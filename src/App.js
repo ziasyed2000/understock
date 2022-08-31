@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="layout">
       <Container fluid>
-        <Row sm={8}>
+        <Row>
           <Col>
-            Header
+            <Header />
           </Col>
         </Row>
         <Row>

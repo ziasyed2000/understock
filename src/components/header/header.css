@@ -2,6 +2,10 @@
   background-color: white;
 }
 
+.col {
+  padding: 0;
+}
+
 .container {
   margin: 0;
 }/*# sourceMappingURL=header.css.map */
