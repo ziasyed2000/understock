@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "./components/header/Header";
+import Content from "./components/Content/Content";
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -16,7 +18,7 @@ function App() {
         </Row>
         <Row>
           <Col className="padding-0">
-            content
+            <Content />
           </Col>
         </Row>
         <Row>

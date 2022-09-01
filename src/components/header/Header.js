@@ -37,7 +37,7 @@ export default function Header(props) {
             </Form>
           </Container>
           <Nav className="ms-auto">
-            <Container className="d-flex align-items-center">
+            <Container className="d-flex align-items-center userPic">
               <svg
                 id="i-user"
                 className="user"
@@ -57,7 +57,7 @@ export default function Header(props) {
             <Container className="accountLabel">
               <Nav.Link href="">My Account</Nav.Link>
             </Container>
-            <Container className="d-flex align-items-center">
+            <Container className="d-flex align-items-center cartPic">
               <svg
                 className="bi bi-cart"
                 xmlns="http://www.w3.org/2000/svg"

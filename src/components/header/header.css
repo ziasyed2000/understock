@@ -10945,6 +10945,10 @@ textarea.form-control-lg {
   padding-left: 0;
 }
 
+.userPic, .cartPic {
+  padding-right: 5px;
+}
+
 .row {
   background-color: white;
 }
