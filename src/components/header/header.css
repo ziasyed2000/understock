@@ -1,21 +1,4 @@
 @charset "UTF-8";
-.navBar {
-  background-color: black;
-}
-
-.searchBtn {
-  background-color: rgb(253, 0, 0);
-}
-
-.row {
-  background-color: white;
-}
-
-.container {
-  margin: 0;
-  padding: 0;
-}
-
 /*!
  * Bootstrap  v5.2.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -10938,4 +10921,40 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.logo {
+  color: red;
+}
+
+.navBar {
+  background-color: black;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.searchBtn {
+  background-color: rgb(253, 0, 0);
+  border-color: rgb(253, 0, 0);
+  font-weight: 650;
+}
+
+.cartLabel, .accountLabel {
+  padding-left: 0;
+}
+
+.row {
+  background-color: white;
+}
+
+.lowerNavbar, .lowerNavbarContainer {
+  padding: 0;
+  background-color: #b3b3b3;
+}
+
+.lowerNavbarContainer > nav > a {
+  color: red;
+  padding: 4px 14px;
 }/*# sourceMappingURL=header.css.map */

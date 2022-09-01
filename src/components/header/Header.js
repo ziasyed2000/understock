@@ -1,10 +1,6 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Navbar, Nav, Form, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./header.css";
 
 // Requirements:
@@ -19,7 +15,7 @@ export default function Header(props) {
     <>
       <Navbar bg="dark" variant="dark" className="navBar">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="#home" className="logo">
             <img
               alt=""
               src="/logo.svg"
@@ -37,7 +33,7 @@ export default function Header(props) {
                 className="justify-content-center"
                 aria-label="Search"
               />
-              <Button variant="primary" className="searchBtn">Search</Button>
+              <Button className="searchBtn">Search</Button>
             </Form>
           </Container>
           <Nav className="ms-auto">
@@ -58,26 +54,57 @@ export default function Header(props) {
                 <path d="M22 11 C22 16 19 20 16 20 13 20 10 16 10 11 10 6 12 3 16 3 20 3 22 6 22 11 Z M4 30 L28 30 C28 21 22 20 16 20 10 20 4 21 4 30 Z" />
               </svg>
             </Container>
-            <Nav.Link href="">My Account</Nav.Link>
+            <Container className="accountLabel">
+              <Nav.Link href="">My Account</Nav.Link>
+            </Container>
             <Container className="d-flex align-items-center">
               <svg
                 className="bi bi-cart"
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
+                width="23"
+                height="23"
                 fill="white"
                 viewBox="0 0 16 16"
               >
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
               </svg>
+            </Container>
+            <Container className="cartLabel">
               <Nav.Link>Your Cart</Nav.Link>
             </Container>
           </Nav>
         </Container>
       </Navbar>
 
-      <Navbar>
-        <Container>helo</Container>
+      <Navbar className="lowerNavbar">
+        <Container className="lowerNavbarContainer justify-content-center">
+          <nav class="nav ">
+            <a class="nav-link active" aria-current="page" href="#">
+              Best Sellers
+            </a>
+            <a class="nav-link" href="#">
+              New Releases
+            </a>
+            <a class="nav-link" href="#">
+              Deal Store
+            </a>
+            <a class="nav-link" href="#">
+              Home
+            </a>
+            <a class="nav-link" href="#">
+              Fashion
+            </a>
+            <a class="nav-link" href="#">
+              Book
+            </a>
+            <a class="nav-link" href="#">
+              Sports & Outdoors
+            </a>
+            <a class="nav-link">
+              Toys & Games
+            </a>
+          </nav>
+        </Container>
       </Navbar>
     </>
   );

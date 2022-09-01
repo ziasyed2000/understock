@@ -1,23 +1,50 @@
-$header-bg: black;
-$searchBtn-color: rgb(253, 0, 0);
+@import "../../Sass/Variables.scss";
+// @import "../../../node_modules/bootstrap/scss/functions";
+// @import "../../../node_modules/bootstrap/scss/variables";
+// @import "../../../node_modules/bootstrap/scss/maps";
+// @import "../../../node_modules/bootstrap/scss/mixins";
+// @import "../../../node_modules/bootstrap/scss/root";
+// @import "../../../node_modules/bootstrap/scss/containers";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
+.logo {
+    color: $font-color;
+}
 
 .navBar {
-    background-color: $header-bg;
+  background-color: $header-bg;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .searchBtn {
-    background-color: $searchBtn-color;
+  background-color: $searchBtn-color;
+  border-color: $searchBtn-color;
+  font-weight: 650;
 }
+
+.cartLabel, .accountLabel {
+    padding-left: 0;
+}
+
 
 .row {
-    background-color: white;
+  background-color: white;
 }
 
-.container {
-    margin: 0;
+//Lower NavBar
+
+.lowerNavbar, .lowerNavbarContainer {
     padding: 0;
+    background-color: lighten($header-bg, 70%);
 }
 
-@import '../../../node_modules/bootstrap/scss/bootstrap';
-
+.lowerNavbarContainer > nav > a {
+    color: red;
+    padding: 4px 14px;
+}
 
