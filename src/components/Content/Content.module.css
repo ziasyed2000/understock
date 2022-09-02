@@ -1,0 +1,31 @@
+.container {
+  background-color: yellow;
+}
+
+.contentContainerLower {
+  padding: 20px 20px;
+  width: 60%;
+}
+
+.card-img-top {
+  height: 9rem;
+}
+
+.contentRow {
+  height: fit-content;
+  padding: 10px 0;
+}
+
+.card {
+  height: fit-content;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.card-text {
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=Content.module.css.map */
