@@ -2,14 +2,24 @@
 
 body, html {
     margin: 0;
-    height: 100%;
+    height:auto;
     width: 100%;
     background-color: grey;
     font-size: 14px;
 }
 
-.padding-0 {
+.mainRow, .mainCol {
     padding-right:0;
     padding-left:0;
+}
+
+// .mainContainer {
+    //     height: fit-content;
+    // }
+
+    
+.mainRow {
+    width: 100%;
+   height: fit-content; 
 }
 

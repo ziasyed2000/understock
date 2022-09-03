@@ -5,24 +5,24 @@ import Content from "./components/Content/Content";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './App-Styles/App.css'
+import styles from './App-Styles/App.module.css'
 
 function App() {
   return (
-    <div className="layout">
-      <Container fluid>
-        <Row className="padding-0">
-          <Col className="padding-0">
+    <div className={styles.mainLayout}>
+      <Container fluid className={styles.mainContainer}>
+        <Row className={styles.mainRow}>
+          <Col className={styles.mainCol}>
             <Header />
           </Col>
         </Row>
-        <Row>
-          <Col className="padding-0">
+        <Row className={styles.mainRow}>
+          <Col className={styles.mainCol}>
             <Content />
           </Col>
         </Row>
-        <Row>
-          <Col className="padding-0">
+        <Row className={styles.mainRow}>
+          <Col className={styles.mainCol}>
             Footer
           </Col>
         </Row>

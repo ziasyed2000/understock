@@ -1,18 +1,17 @@
 @use "../../Sass/Variables.scss" as *;
 
-
 .logo {
-    color: $font-color;
+  color: $font-color;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .navBar {
   background-color: $header-bg;
 }
 
-.navbar-brand {
-  font-size: 25px;
-  font-weight: 600;
-}
+// .navbarbrand {
+// }
 
 .searchBtn {
   background-color: $searchBtn-color;
@@ -20,14 +19,15 @@
   font-weight: 650;
 }
 
-.cartLabel, .accountLabel {
-    padding-left: 0;
+.cartLabel,
+.accountLabel {
+  padding-left: 0;
 }
 
-.userPic, .cartPic {
+.userPic,
+.cartPic {
   padding-right: 5px;
 }
-
 
 .row {
   background-color: white;
@@ -35,13 +35,13 @@
 
 //Lower NavBar
 
-.lowerNavbar, .lowerNavbarContainer {
-    padding: 0;
-    background-color: lighten($header-bg, 70%);
+.lowerNavbar,
+.lowerNavbarContainer {
+  padding: 0;
+  background-color: lighten($header-bg, 70%);
 }
 
 .lowerNavbarContainer > nav > a {
-    color: red;
-    padding: 4px 14px;
+  color: red;
+  padding: 4px 14px;
 }
-

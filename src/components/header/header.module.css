@@ -1,14 +1,11 @@
 .logo {
   color: red;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .navBar {
   background-color: black;
-}
-
-.navbar-brand {
-  font-size: 25px;
-  font-weight: 600;
 }
 
 .searchBtn {
@@ -17,11 +14,13 @@
   font-weight: 650;
 }
 
-.cartLabel, .accountLabel {
+.cartLabel,
+.accountLabel {
   padding-left: 0;
 }
 
-.userPic, .cartPic {
+.userPic,
+.cartPic {
   padding-right: 5px;
 }
 
@@ -29,7 +28,8 @@
   background-color: white;
 }
 
-.lowerNavbar, .lowerNavbarContainer {
+.lowerNavbar,
+.lowerNavbarContainer {
   padding: 0;
   background-color: #b3b3b3;
 }

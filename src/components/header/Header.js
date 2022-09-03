@@ -15,7 +15,7 @@ export default function Header(props) {
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className={styles.navBar}>
         <Container>
-            <Navbar.Brand href="#home" className={styles.logo}>
+            <Navbar.Brand href="#home" className={`${styles.logo}`}>
               <img
                 alt=""
                 src="/logo.svg"

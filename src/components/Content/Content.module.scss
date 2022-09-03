@@ -1,10 +1,14 @@
 @use "../../Sass/Variables.scss";
 
-.container-fluid {
+.contentContainerUpper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: red;
 }
 
 .contentContainerLower {
-    background-color: yellow;
+    // background-color: yellow;
     padding: 20px 20px;
     width: 60%;
 }
@@ -17,6 +21,12 @@
     height: fit-content;
     padding: 10px 0;
 }
+
+.contentCol {
+    display: flex;
+    justify-content: center;
+}
+
 
 .card {
     // max-height: 70%;
