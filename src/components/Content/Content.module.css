@@ -1,8 +1,5 @@
-.container {
-  background-color: yellow;
-}
-
 .contentContainerLower {
+  background-color: yellow;
   padding: 20px 20px;
   width: 60%;
 }

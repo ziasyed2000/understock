@@ -1,18 +1,18 @@
 import React from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
 
-import "./Content.module.css";
+import styles from "./Content.module.css";
 
 function Content() {
   return (
     <>
       <Container className="contentContainerUpper">hi</Container>
-      <Container className="contentContainerLower" fluid>
+      <Container className={styles.contentContainerLower} fluid>
         <Row className="contentRow">
           <Col>
             <Card className="contentCards" style={{ width: "18rem" }}>
               <Card.Img
-                className="catagoryImg"
+                className={styles.catagoryImg}
                 variant="top"
                 src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               />
@@ -44,7 +44,7 @@ function Content() {
           <Col>
             <Card style={{ width: "18rem" }}>
               <Card.Img
-                className="catagoryImg"
+                className={styles.catagoryImg}
                 variant="top"
                 src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               />
@@ -62,7 +62,7 @@ function Content() {
           <Col>
             <Card style={{ width: "18rem" }}>
               <Card.Img
-                className="catagoryImg"
+                className={styles.catagoryImg}
                 variant="top"
                 src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               />
@@ -78,7 +78,7 @@ function Content() {
           <Col>
             <Card style={{ width: "18rem" }}>
               <Card.Img
-                className="catagoryImg"
+                className={styles.catagoryImg}
                 variant="top"
                 src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               />
@@ -94,7 +94,7 @@ function Content() {
           <Col>
             <Card style={{ width: "18rem" }}>
               <Card.Img
-                className="catagoryImg"
+                className={styles.catagoryImg}
                 variant="top"
                 src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               />
