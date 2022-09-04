@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/header/Header";
-import Content from "./components/Content/Content";
+import Content from "./components/Content/HomePage/Content";
+import Footer from "./components/Footer/Footer";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -23,7 +24,7 @@ function App() {
         </Row>
         <Row className={styles.mainRow}>
           <Col className={styles.mainCol}>
-            Footer
+            <Footer />
           </Col>
         </Row>
       </Container>

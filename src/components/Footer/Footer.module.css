@@ -1,0 +1,20 @@
+.footerContainer {
+  background-color: black;
+  margin: 0;
+  color: white;
+  padding: 20px 20px 25px 20px;
+  text-align: center;
+}
+
+.logo {
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.knowTeam > p {
+  padding: 0;
+}
+
+/*# sourceMappingURL=Footer.module.css.map */

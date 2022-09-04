@@ -1,10 +1,10 @@
-@use "../../Sass/Variables.scss";
+@use "../../../Sass/Variables.scss";
 
-.headingContainer {
-    // text-align: center;
-    display: flex;
-    justify-content: center;
-}
+// .headingContainer {
+//     // text-align: center;
+//     // display: flex;
+//     // justify-content: center;
+// }
 
 .carouselHeader{
     position: absolute;
@@ -17,13 +17,17 @@
 
 .contentContainerUpper {
     width: 100%;
-    padding: 0;    
+    padding: 10px 5px 0 5px;
+    height: fit-content; 
+    display: flex;
+    // justify-content: center;
+   
 }
 
 .contentContainerLower {
     padding: 20px 20px;
     width: 60%;
-    margin-top: -40%;
+    color: white;
 }
 
 .card-img-top {
@@ -42,12 +46,16 @@
 }
 
 
-.card {
-    // max-height: 70%;
-    height: fit-content;
+.contentCards {
+    border: solid red 2px;
+    background-color: black;
+    border-top: 0;
+    border-bottom: 0;
 }
  
-
+.catagoriesTitle {
+    text-align: center;
+}
 
 .card-title {
     font-size: 20px;

@@ -57,7 +57,7 @@ export default function Header(props) {
                 </svg>
               </Container>
               <Container className={styles.accountLabel}>
-                <Nav.Link href="">My Account</Nav.Link>
+                <Nav.Link href="/LoginPage">My Account</Nav.Link>
               </Container>
               <Container className={`d-flex align-items-center ${styles.cartPic}`}>
                 <svg
@@ -103,7 +103,7 @@ export default function Header(props) {
             <a class="nav-link" href="#">
               Sports & Outdoors
             </a>
-            <a class="nav-link">Toys & Games</a>
+            <a class="nav-link" href="#">Toys & Games</a>
           </nav>
         </Container>
       </Navbar>
