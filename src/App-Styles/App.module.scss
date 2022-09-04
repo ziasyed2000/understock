@@ -1,25 +1,27 @@
 // @use "../../../node_modules/bootstrap/scss/bootstrap";
 
-body, html {
-    margin: 0;
-    height:auto;
-    width: 100%;
-    background-color: grey;
-    font-size: 14px;
+body,
+html {
+  margin: 0;
+  height: auto;
+  width: 100%;
+  background-color: grey;
+  font-size: 14px;
 }
 
-.mainRow, .mainCol {
-    padding-right:0;
-    padding-left:0;
+.mainRow,
+.mainCol {
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0;
 }
 
-// .mainContainer {
-    //     height: fit-content;
-    // }
+.mainContainer {
+  height: fit-content;
+  padding: 0;
+}
 
-    
 .mainRow {
-    width: 100%;
-   height: fit-content; 
+  width: 100%;
+  height: fit-content;
 }
-

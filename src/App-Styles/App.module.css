@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   height: auto;
   width: 100%;
@@ -6,9 +7,16 @@ body, html {
   font-size: 14px;
 }
 
-.mainRow, .mainCol {
+.mainRow,
+.mainCol {
   padding-right: 0;
   padding-left: 0;
+  margin: 0;
+}
+
+.mainContainer {
+  height: fit-content;
+  padding: 0;
 }
 
 .mainRow {

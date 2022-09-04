@@ -7,13 +7,18 @@ import styles from "./Content.module.css";
 function Content() {
   return (
     <>
-        <Container className={styles.contentContainerUpper}>
-          <Carousel />
+      <Container fluid className={styles.contentContainerUpper}>
+        <Container className={styles.headingContainer} fluid>
+          <h3 className={`${styles.carouselHeader}`}>UnderStock</h3>
         </Container>
+        <Carousel />
         <Container className={styles.contentContainerLower} fluid>
           <Row className={styles.contentRow}>
             <Col className={styles.contentCol}>
-              <Card className="contentCards" style={{ width: "18rem", margin: 0 }}>
+              <Card
+                className="contentCards"
+                style={{ width: "18rem", margin: 0 }}
+              >
                 <Card.Img
                   className={styles.catagoryImg}
                   variant="top"
@@ -22,14 +27,17 @@ function Content() {
                 <Card.Body>
                   <Card.Title>Electronic & Accessories</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
             <Col className={styles.contentCol}>
-              <Card className="contentCards" style={{ width: "18rem", margin: 0 }}>
+              <Card
+                className="contentCards"
+                style={{ width: "18rem", margin: 0 }}
+              >
                 <Card.Img
                   className={styles.catagoryImg}
                   variant="top"
@@ -38,14 +46,17 @@ function Content() {
                 <Card.Body>
                   <Card.Title>Electronic & Accessories</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
             <Col className={styles.contentCol}>
-              <Card className="contentCards" style={{ width: "18rem", margin: 0 }}>
+              <Card
+                className="contentCards"
+                style={{ width: "18rem", margin: 0 }}
+              >
                 <Card.Img
                   className={styles.catagoryImg}
                   variant="top"
@@ -54,8 +65,8 @@ function Content() {
                 <Card.Body>
                   <Card.Title>Electronic & Accessories</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -63,7 +74,10 @@ function Content() {
           </Row>
           <Row>
             <Col className={styles.contentCol}>
-              <Card className="contentCards" style={{ width: "18rem", margin: 0 }}>
+              <Card
+                className="contentCards"
+                style={{ width: "18rem", margin: 0 }}
+              >
                 <Card.Img
                   className={styles.catagoryImg}
                   variant="top"
@@ -72,14 +86,17 @@ function Content() {
                 <Card.Body>
                   <Card.Title>Electronic & Accessories</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
             <Col className={styles.contentCol}>
-              <Card className="contentCards" style={{ width: "18rem", margin: 0 }}>
+              <Card
+                className="contentCards"
+                style={{ width: "18rem", margin: 0 }}
+              >
                 <Card.Img
                   className={styles.catagoryImg}
                   variant="top"
@@ -88,14 +105,17 @@ function Content() {
                 <Card.Body>
                   <Card.Title>Electronic & Accessories</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
             <Col className={styles.contentCol}>
-              <Card className="contentCards" style={{ width: "18rem", margin: 0 }}>
+              <Card
+                className="contentCards"
+                style={{ width: "18rem", margin: 0 }}
+              >
                 <Card.Img
                   className={styles.catagoryImg}
                   variant="top"
@@ -104,14 +124,15 @@ function Content() {
                 <Card.Body>
                   <Card.Title>Electronic & Accessories</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
         </Container>
+      </Container>
     </>
   );
 }
