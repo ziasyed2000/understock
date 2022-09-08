@@ -1,0 +1,22 @@
+.cartPageContainer {
+    background-color: black;
+    margin-top: 100px;
+    width: 70%;
+    padding: 10px 10px 20px 10px;
+    min-width: 650px;
+    border-radius: 5px;
+}
+
+.cartInnerItems {
+    border-top: 0.1px solid rgb(130, 130, 130) ;
+    border-bottom: 0.1px solid rgb(130, 130, 130) ;
+    padding: 10px;
+}
+
+.itemOptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: red;
+}

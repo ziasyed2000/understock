@@ -4,6 +4,10 @@
   color: $font-color;
   font-size: 25px;
   font-weight: 600;
+  a {
+    color: $font-color;
+    text-decoration: none;
+  }
 }
 
 .navBar {

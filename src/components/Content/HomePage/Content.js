@@ -8,9 +8,6 @@ function Content() {
   return (
     <>
       <Container fluid className={`${styles.contentContainerUpper} `}>
-        {/* <Container className={styles.headingContainer} fluid> */}
-        {/* <h3 className={`${styles.carouselHeader}`}>UnderStock</h3> */}
-        {/* </Container> */}
         <Carousel />
       </Container>
       <Container className={styles.contentContainerLower} fluid>

@@ -23,7 +23,7 @@ export default function Header(props) {
                 height="30"
                 className="d-inline-block align-top"
               />{" "}
-              UnderStock
+              <a href="/">UnderStock</a>
             </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -72,7 +72,7 @@ export default function Header(props) {
                 </svg>
               </Container>
               <Container className={styles.cartLabel}>
-                <Nav.Link>Your Cart</Nav.Link>
+                <Nav.Link href="/CartPage">Your Cart</Nav.Link>
               </Container>
             </Nav>
           </Navbar.Collapse>

@@ -1,0 +1,12 @@
+html, body {
+  height: 100%;
+}
+
+.simpleHeaderContainer {
+  color: red;
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=SimpleHeader.module.css.map */

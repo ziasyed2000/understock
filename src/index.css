@@ -1,0 +1,9 @@
+#root {
+    color: white;
+    height: 100%;
+}
+
+.itemOptions {
+    display: flex;
+    flex-direction: column;
+}

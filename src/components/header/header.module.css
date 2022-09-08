@@ -3,6 +3,10 @@
   font-size: 25px;
   font-weight: 600;
 }
+.logo a {
+  color: red;
+  text-decoration: none;
+}
 
 .navBar {
   background-color: black;
