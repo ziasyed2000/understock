@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import Carousel from "./Carousel/Carousel";
 
 import styles from "./Content.module.css";
 
 function Content() {
+  const [itemsInfo, setItemsInfo] = useState(0);    
+  const [categoriesInRow, setcategoriesInRow] = useState();
+  
+  useEffect(() => {
+      const url = "https://fakestoreapi.com/products/categories";
+      fetch(url)
+      .then(response => response.json())
+      .then(json => setItemsInfo(json));
+      console.log(itemsInfo)
+  }, [itemsInfo == 0]);
+  
+
+  function categoriesRender() {
+    if (categoriesInRow == 3) {
+      
+    }
+  }
+
   return (
     <>
       <Container fluid className={`${styles.contentContainerUpper} `}>
@@ -14,7 +32,10 @@ function Content() {
         <Row className={styles.catagoriesTitle}>
           <h4> - - - - - - - - - - - - - - - - - - - Catagories - - - - - - - - - - - - - - - - - - -</h4>
         </Row>
-        <Row className={styles.contentRow}>
+        {
+          
+        }
+        {/* <Row className={styles.contentRow}>
           <Col className={styles.contentCol}>
             <Card
               className={styles.contentCards}
@@ -133,7 +154,7 @@ function Content() {
             </Card>
           </Col>
           
-        </Row>
+        </Row> */}
       </Container>
     </>
   );
