@@ -5,21 +5,43 @@ import Carousel from "./Carousel/Carousel";
 import styles from "./Content.module.css";
 
 function Content() {
-  const [itemsInfo, setItemsInfo] = useState(0);    
-  const [categoriesInRow, setcategoriesInRow] = useState();
-  
-  useEffect(() => {
-      const url = "https://fakestoreapi.com/products/categories";
-      fetch(url)
-      .then(response => response.json())
-      .then(json => setItemsInfo(json));
-      console.log(itemsInfo)
-  }, [itemsInfo == 0]);
-  
+  const [itemsInfo, setItemsInfo] = useState(0);
+  const [categoriesInRow, setcategoriesInRow] = useState(0);
 
-  function categoriesRender() {
-    if (categoriesInRow == 3) {
-      
+  useEffect(() => {
+    const url = "https://fakestoreapi.com/products/categories";
+    fetch(url)
+      .then((response) => response.json())
+      .then((json) => setItemsInfo(json));
+    console.log(itemsInfo);
+  }, [itemsInfo == 0]);
+
+  function categoriesRender(catagory) {
+    if (categoriesInRow === 3) {
+    } else {
+      return (
+        <>
+          <Col className={styles.contentCol}>
+            <Card
+              className={styles.contentCards}
+              style={{ width: "18rem", margin: 0 }}
+            >
+              <Card.Img
+                className={styles.catagoryImg}
+                variant="top"
+                src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              />
+              <Card.Body className={styles.cardBody}>
+                <Card.Title>{catagory}</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </>
+      );
     }
   }
 
@@ -30,11 +52,12 @@ function Content() {
       </Container>
       <Container className={styles.contentContainerLower} fluid>
         <Row className={styles.catagoriesTitle}>
-          <h4> - - - - - - - - - - - - - - - - - - - Catagories - - - - - - - - - - - - - - - - - - -</h4>
+          <h4>
+            - - - - - - - - - - - - - - - - - - - Catagories - - - - - - - - - -
+            - - - - - - - - -
+          </h4>
         </Row>
-        {
-          
-        }
+        {itemsInfo.map(catagory => categoriesRender(catagory))}
         {/* <Row className={styles.contentRow}>
           <Col className={styles.contentCol}>
             <Card
