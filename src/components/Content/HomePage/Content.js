@@ -5,20 +5,25 @@ import Carousel from "./Carousel/Carousel";
 import styles from "./Content.module.css";
 
 function Content() {
-  const [itemsInfo, setItemsInfo] = useState(0);
+  const [itemsInfo, setItemsInfo] = useState([0]);
   const [categoriesInRow, setcategoriesInRow] = useState(0);
 
   useEffect(() => {
     const url = "https://fakestoreapi.com/products/categories";
-    fetch(url)
-      .then((response) => response.json())
-      .then((json) => setItemsInfo(json));
-    console.log(itemsInfo);
-  }, [itemsInfo == 0]);
+    console.log(itemsInfo)
+    if (itemsInfo.includes(0)) {
+      fetch(url)
+        .then((response) => response.json())
+        .then((json) => setItemsInfo(json));
+      console.log(itemsInfo);
+    }
+  }, []);
 
   function categoriesRender(catagory) {
     if (categoriesInRow === 3) {
+      setcategoriesInRow(0);
     } else {
+      setcategoriesInRow(categoriesInRow + 1);
       return (
         <>
           <Col className={styles.contentCol}>
@@ -57,7 +62,7 @@ function Content() {
             - - - - - - - - -
           </h4>
         </Row>
-        {itemsInfo.map(catagory => categoriesRender(catagory))}
+        {itemsInfo.map((catagory) => categoriesRender(catagory))}
         {/* <Row className={styles.contentRow}>
           <Col className={styles.contentCol}>
             <Card
