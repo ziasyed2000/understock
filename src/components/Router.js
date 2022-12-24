@@ -5,7 +5,7 @@ import  App from '../App';
 import LoginPage from '../components/Content/LoginPage/LoginPage';
 import CartPage from './Content/CartPage/CartPage';
 import ItemsPage from './Content/ItemPage/ItemsPage';
-
+import Register from './Content/Register/Register';
 function Router() {
  return (
     <BrowserRouter>
@@ -14,6 +14,7 @@ function Router() {
       <Route path="/LoginPage" element={<LoginPage />} />
       <Route path="/CartPage" element={<CartPage />} />
       <Route path="/ItemsPage" element={<ItemsPage />} />
+      <Route path="/Register" element={<Register />} />
     </Routes>
   </BrowserRouter>
   )

@@ -5,51 +5,20 @@ import Carousel from "./Carousel/Carousel";
 import styles from "./Content.module.css";
 
 function Content() {
-  const [itemsInfo, setItemsInfo] = useState([0]);
-  const [categoriesInRow, setcategoriesInRow] = useState(0);
+  const [catagories, setcatagories] = useState(null)
 
-  useEffect(() => {
-    const url = "https://fakestoreapi.com/products/categories";
-    console.log(itemsInfo)
-    if (itemsInfo.includes(0)) {
-      fetch(url)
-        .then((response) => response.json())
-        .then((json) => setItemsInfo(json));
-      console.log(itemsInfo);
-    }
-  }, []);
-
-  function categoriesRender(catagory) {
-    if (categoriesInRow === 3) {
-      setcategoriesInRow(0);
-    } else {
-      setcategoriesInRow(categoriesInRow + 1);
-      return (
-        <>
-          <Col className={styles.contentCol}>
-            <Card
-              className={styles.contentCards}
-              style={{ width: "18rem", margin: 0 }}
-            >
-              <Card.Img
-                className={styles.catagoryImg}
-                variant="top"
-                src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              />
-              <Card.Body className={styles.cardBody}>
-                <Card.Title>{catagory}</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </>
-      );
-    }
-  }
-
+  useEffect(() => { 
+    fetch('https://fakestoreapi.com/products/categories')
+      .then(res=> {
+        if (res.ok) {
+          return res.json();
+        }
+        throw new Error("Server Bad")
+      })
+      .then(json=>{setcatagories(json); console.log(json)})
+      .catch((error) => console.log(error))
+  }, [])
+  
   return (
     <>
       <Container fluid className={`${styles.contentContainerUpper} `}>
@@ -62,69 +31,9 @@ function Content() {
             - - - - - - - - -
           </h4>
         </Row>
-        {itemsInfo.map((catagory) => categoriesRender(catagory))}
-        {/* <Row className={styles.contentRow}>
-          <Col className={styles.contentCol}>
-            <Card
-              className={styles.contentCards}
-              style={{ width: "18rem", margin: 0 }}
-            >
-              <Card.Img
-                className={styles.catagoryImg}
-                variant="top"
-                src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              />
-              <Card.Body className={styles.cardBody}>
-                <Card.Title>Electronic & Accessories</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className={styles.contentCol}>
-            <Card
-              className={styles.contentCards}
-              style={{ width: "18rem", margin: 0 }}
-            >
-              <Card.Img
-                className={styles.catagoryImg}
-                variant="top"
-                src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              />
-              <Card.Body className={styles.cardBody}>
-                <Card.Title>Electronic & Accessories</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className={styles.contentCol}>
-            <Card
-              className={styles.contentCards}
-              style={{ width: "18rem", margin: 0 }}
-            >
-              <Card.Img
-                className={styles.catagoryImg}
-                variant="top"
-                src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              />
-              <Card.Body className={styles.cardBody}>
-                <Card.Title>Electronic & Accessories</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          
-        </Row>
         <Row>
-          <Col className={styles.contentCol}>
+          {catagories && catagories.map(data => (
+            <Col className={styles.contentCol}>
             <Card
               className={styles.contentCards}
               style={{ width: "18rem", margin: 0 }}
@@ -135,7 +44,7 @@ function Content() {
                 src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               />
               <Card.Body className={styles.cardBody}>
-                <Card.Title>Electronic & Accessories</Card.Title>
+                <Card.Title>{data}</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -143,46 +52,12 @@ function Content() {
               </Card.Body>
             </Card>
           </Col>
-          <Col className={styles.contentCol}>
-            <Card
-              className={styles.contentCards}
-              style={{ width: "18rem", margin: 0 }}
-            >
-              <Card.Img
-                className={styles.catagoryImg}
-                variant="top"
-                src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              />
-              <Card.Body className={styles.cardBody}>
-                <Card.Title>Electronic & Accessories</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className={styles.contentCol}>
-            <Card
-              className={styles.contentCards}
-              style={{ width: "18rem", margin: 0 }}
-            >
-              <Card.Img
-                className={styles.catagoryImg}
-                variant="top"
-                src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              />
-              <Card.Body className={styles.cardBody}>
-                <Card.Title>Electronic & Accessories</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          
-        </Row> */}
+          )
+            
+            
+            //return <div key={data}>{data}</div>
+          )}
+        </Row>
       </Container>
     </>
   );

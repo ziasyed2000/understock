@@ -33,6 +33,12 @@ function LoginPage() {
           <Button className={styles.btn} variant="danger" type="Button" href="/">
             Cancel
           </Button>
+          <div>
+            <Form.Text>
+              Don't have an Account? <a href="/Register">Sign Up</a>
+            </Form.Text>
+          </div>
+         
         </Form>
       </Container>
     </Container>
