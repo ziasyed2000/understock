@@ -15,13 +15,15 @@ html {
 }
 
 .mainContainer {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 0;
 }
 
 .mainRow {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
-}
-
-/*# sourceMappingURL=App.module.css.map */
+}/*# sourceMappingURL=App.module.css.map */

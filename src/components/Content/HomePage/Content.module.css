@@ -10,6 +10,8 @@
 .contentContainerUpper {
   width: 100%;
   padding: 10px 5px 0 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   display: flex;
 }
@@ -25,6 +27,8 @@
 }
 
 .contentRow {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 10px 0;
 }
@@ -52,6 +56,4 @@
 
 .card-text {
   font-size: 10px;
-}
-
-/*# sourceMappingURL=Content.module.css.map */
+}/*# sourceMappingURL=Content.module.css.map */

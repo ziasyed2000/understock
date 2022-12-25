@@ -7,9 +7,8 @@
 }
 
 .img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 350px;
   zoom: 1.5;
-}
-
-/*# sourceMappingURL=Carousel.module.css.map */
+}/*# sourceMappingURL=Carousel.module.css.map */

@@ -27,7 +27,7 @@ function LoginPage() {
           </Form.Group>
 
           <Button variant="danger" type="submit">
-            Submit
+            login
           </Button>
 
           <Button className={styles.btn} variant="danger" type="Button" href="/">

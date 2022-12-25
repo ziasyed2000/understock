@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["SimpleHeader.module.scss"],"names":[],"mappings":"AAAA;EACI;;;AAIJ;EACI;EACA;EACA;EACA","file":"SimpleHeader.module.css"}
+{"version":3,"sources":["SimpleHeader.module.scss","SimpleHeader.module.css"],"names":[],"mappings":"AAAA;EACI,YAAA;ACCJ;;ADGA;EACI,UAAA;EACA,uBAAA;EACA,aAAA;EACA,kBAAA;ACAJ","file":"SimpleHeader.module.css"}

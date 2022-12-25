@@ -1,0 +1,43 @@
+.loginPageContainer {
+    height: 100%;
+    padding: 0;
+}
+
+.headerContainer {
+    padding: 0;
+}
+
+.loginFormContainer {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: stretch;
+    width: fit-content;
+    min-width: 300px;
+    margin-top: 90px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+
+.btn {
+    margin-left: 10px;
+}
+
+.valid {
+    background-color: rgb(0, 255, 0);
+}
+
+.invalid {
+    background-color: red;
+}
+
+.hide {
+    display: none;
+}
+
+.offscreen {
+    position: absolute;
+    left: -100000px;
+}
