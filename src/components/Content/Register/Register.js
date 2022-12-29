@@ -4,10 +4,11 @@ import { faCheck, faInfoCircle, faTimes } from "@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Register.module.css";
 import SimpleHeader from "../LoginPage/SimpleHeader/SimpleHeader";
+import axios from "../../../api/axios";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-
+const registerPage = '/Register';
 
 function Register() {
     const userRef = useRef();
@@ -50,13 +51,36 @@ function Register() {
         setErrMsg('');
     }, [user, pwd])
 
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      const userCheck = USER_REGEX.test(user);
+      const pwdCheck = PWD_REGEX.test(pwd);
+      if (userCheck || pwdCheck) {
+        setErrMsg("Invalid Entry");
+        return;
+      }
+      try {
+        const response = await axios.post(registerPage,
+          JSON.stringify({user, pwd}),
+          {
+            headers: {'Content-Type': 'application/json'},
+            withCredentials: true
+          }
+        );
+        console.log(response.data);
+
+      } catch (error) {
+        
+      }
+    }
+
   return (
     <Container fluid className={styles.loginPageContainer}>
       <Container fluid className={styles.headerContainer}>
         <SimpleHeader />
       </Container>
       <Container className={styles.loginFormContainer}>
-        <Form action="http://localhost:8080/login" method="POST" className={styles.Form}>
+        <Form action="http://localhost:8080/login" onSubmit={handleSubmit} method="POST" className={styles.Form}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>
                 Username: 
@@ -132,6 +156,12 @@ function Register() {
             Cancel
           </Button>
         </Form>
+        <p>
+          Already Registered? <br />
+          <span>
+            <a href="/LoginPage">Login</a>
+          </span>
+        </p>
       </Container>
     </Container>
   );
