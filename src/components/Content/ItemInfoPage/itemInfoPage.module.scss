@@ -18,30 +18,60 @@
 }
 
 .buyingOptions{
-    padding: 10px;
+    //padding: 10px;
     min-width: 300px;
 }
 
 .BOInnerDiv {
     background-color: black;
-    padding: 10px;
+    padding: 15px;
     border-radius: 6px;
     font-size: 15px;
+    margin-top: 30px;
 }
 
 .BORow {
     margin: 0;
+    padding-bottom: 10px;
+    width: fit-content;
 }
 
 .Price {
     display: flex;
     flex-wrap: nowrap;
     font-size: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .Price > div {
     padding: 0 3px 0 3px;
     font-size: 15px;
     width: fit-content;
+}
+
+.Quantity {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.Quantity > div {
+    padding: 0 5px 0 0;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.BtnCart, .BtnBuy {
+    width: 100%;
+}
+
+.BtnWish  > * {
+    font-size: 13px;
+    padding: 5px;
+    background-color: rgb(123, 123, 123);
+}
+
+.itemName > * {
+    padding: 10px 10px 10px 10px;
+    margin: 30px 0 0 0;
 }
