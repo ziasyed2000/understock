@@ -1,0 +1,49 @@
+.mainContainer {
+  width: 100%;
+  margin: 0;
+}
+
+.mainCol {
+  padding: 0;
+}
+
+.productPlacementContainer {
+  margin: 0 0 0 0;
+  height: 100%;
+}
+
+.ppC {
+  margin: 0;
+  height: 100%;
+}
+
+.buyingOptions {
+  padding: 10px;
+  min-width: 300px;
+}
+
+.BOInnerDiv {
+  background-color: black;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.BORow {
+  margin: 0;
+}
+
+.Price {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.Price > div {
+  padding: 0 3px 0 3px;
+  font-size: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}/*# sourceMappingURL=itemInfoPage.module.css.map */

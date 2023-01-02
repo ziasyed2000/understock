@@ -82,19 +82,19 @@ export default function Header(props) {
       <Navbar className={styles.lowerNavbar}>
         <Container className={`${styles.lowerNavbarContainer} justify-content-center`}>
           <nav class="nav ">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="/ItemsPage">
               Best Sellers
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/ItemsPage">
               New Releases
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/ItemsPage">
               Deal Store
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/ItemsPage">
               Home
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/ItemsPage">
               Fashion
             </a>
             <a class="nav-link" href="#">
